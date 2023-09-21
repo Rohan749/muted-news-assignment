@@ -6,6 +6,8 @@ const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
 
+  //This is the detailed section which fetches data according to the id passed when clicked on individual movie card.
+
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
