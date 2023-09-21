@@ -4,6 +4,10 @@ import "./styles.css";
 import { Link } from "react-router-dom";
 
 const MovieComponent = ({ data }) => {
+
+  //Here, individual movie is displayed in the grid manner. 
+  //If any card will be clicked, it will redirect to that particular card details according to its id.
+  
   return (
     <>
       <div className="bgBody">
