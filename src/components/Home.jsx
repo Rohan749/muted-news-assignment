@@ -8,11 +8,12 @@ import MovieDetails from "./MovieDetails";
 const Home = () => {
   const [card, setCard] = useState([]);
   const [page, setPage] = useState(1);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
 
   const getCardData = async () => {
+    //Data is being fetched here.
     try {
       const response = await fetch(
         `https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${page}`
@@ -20,8 +21,11 @@ const Home = () => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
+      //For removing the loading screen
       setLoading(false);
       const data = await response.json();
+
+      // New data is added below the previous data as scrolled
       setCard((prev) => [...prev, ...data]);
     } catch (error) {
       console.error(`An error occurred: ${error.message}`);
@@ -37,6 +41,7 @@ const Home = () => {
   const handelInfiniteScroll = async () => {
     try {
       if (
+        //Calculates the inner height of the website as soon as it reaches the bottom.
         window.innerHeight + document.documentElement.scrollTop + 1 >=
         document.documentElement.scrollHeight
       ) {
