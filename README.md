@@ -6,10 +6,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm install` to install neccessary dependencies in your local pc.
+First step is to clone the repo in your local pc.
+### `git clone <paste-the-copied-url>`
+<br>
 
-### `npm start` to start the application
+Next is to install neccessary dependencies in your local pc where you have cloned the repo.
+### `npm install` 
 
+<br>
+
+Now, start the app in your local server.
+### `npm start`
+
+<br>
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
