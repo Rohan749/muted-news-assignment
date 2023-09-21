@@ -2,6 +2,8 @@ import React from "react";
 import "./styles.css";
 
 const MovieCard = ({ myData }) => {
+
+  //Individual Card component of the movies which displays in the front page
   const { title, body, id } = myData;
 
   return (
